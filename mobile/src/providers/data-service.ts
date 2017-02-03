@@ -10,8 +10,8 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class DataService {
-  //prod: string = 'http://localhost:3000';
-  prod: string = 'https://fast-cove-98117.herokuapp.com';
+  prod: string = 'http://localhost:3000';
+  // prod: string = 'https://fast-cove-98117.herokuapp.com';
 
   resData: any;
   evacData: any;
@@ -49,20 +49,21 @@ export class DataService {
   }
 
   loadSupplyPins(sid){
-    if (this.resData) {
-      return Promise.resolve(this.resData);
-    } else {
-      return new Promise(resolve => {
-        let url = this.prod + '/supplies/' + sid + '/pins';
-        console.log(url);
-        this.http.get(url)
-          .map(res => res.json())
-          .subscribe(data => {
-            this.resData = data;
-            resolve(data);
-          });
-      });
-    }
+    // if (this.resData) {
+    //   return Promise.resolve(this.resData);
+    // } else {
+    //
+    // }
+    return new Promise(resolve => {
+      let url = this.prod + '/supplies/' + sid + '/pins';
+      console.log(url);
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.resData = data;
+          resolve(data);
+        });
+    });
   }
 
   loadCenters(id){
