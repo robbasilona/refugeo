@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="red">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+        <ion-label>Back</ion-label>
+      </button>
+    </ion-buttons>
+    <ion-title>Resource</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-scroll zoom="false" scrollX="false" scrollY="true" id="resources">
+    <ion-list>
+      <ion-item *ngFor="let supply of supplies">
+        <ion-label>{{supply.name}}</ion-label>
+        <ion-toggle [(ngModel)]="supply.enabled" (ionChange)="displayPins()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </ion-scroll>
+  <br>
+  <ion-item (click)="goToCenter()">
+    <ion-icon name="md-locate" item-left class="locateIcon"></ion-icon>
+    <ion-label>{{loc}}</ion-label>
+  </ion-item>
+  <div #map id="map"></div>
+</ion-content>
