@@ -35,21 +35,28 @@ Might need to execute *bundle install* and *bundle exec rails db:reset* if there
 #no need to change working directory
 nvm install stable
 nvm use stable
-npm install -g cordova ionic
+npm install -g cordova ionic ios-sim ios-deploy
 cd csidevise/mobile
 npm install
+ionic plugin add cordova-plugin-whitelist
 ionic plugin add cordova-plugin-geolocation
-ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyAnesP8EwTMBecjSmPBzeMp1hP3sG3IPgE" --variable API_KEY_FOR_IOS="AIzaSyAnesP8EwTMBecjSmPBzeMp1hP3sG3IPgE"
+ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyDwCB5OuH2bl37BlHL9hyCWmN9tmobombo" --variable API_KEY_FOR_IOS="AIzaSyDwCB5OuH2bl37BlHL9hyCWmN9tmobombo"
+ionic plugin add https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyDwCB5OuH2bl37BlHL9hyCWmN9tmobombo" --variable API_KEY_FOR_IOS="AIzaSyDwCB5OuH2bl37BlHL9hyCWmN9tmobombo"
 ionic plugin add cordova-plugin-inappbrowser
 npm install @types/google-maps
 cordova telemetry on
+cordova prepare
 ionic serve
 ```
 
 Might need to execute *npm install* to install other packages.
 
 ### Some API credentials
-Rails Deployed App
+Web App
+```
+```
+
+Rails API Deployed App
 ```
 https://fast-cove-98117.herokuapp.com/
 ```
@@ -59,11 +66,9 @@ Node Messenger App
 https://pacific-everglades-10344.herokuapp.com/
 ```
 
-Google Maps API keys
+Google Maps API key
 ```
-AIzaSyAnesP8EwTMBecjSmPBzeMp1hP3sG3IPgE
 AIzaSyDwCB5OuH2bl37BlHL9hyCWmN9tmobombo
-AIzaSyCX0aSEKjuihv_6GTOVQ4ZMpPX4I_XxMrY
 ```
 Chikka API
 ```

@@ -39,14 +39,6 @@ export class HomePage {
     this.goods = true;
     this.batteries = false;
     this.api = ds_api;
-    this.api.loadSupplies(0).then(data => {
-      this.supplies = data;
-      for (let supply of this.supplies) {
-        supply.enabled = false;
-      }
-      this.supplies[0].enabled = true;
-      this.displayPins();
-    });
   }
 
   back(){
@@ -67,12 +59,22 @@ export class HomePage {
     this.loadMap();
   }
 
+  ionViewDidLoad(){
+    this.api.loadSupplies(0).then(data => {
+      this.supplies = data;
+      for (let supply of this.supplies) {
+        supply.enabled = false;
+      }
+      this.supplies[0].enabled = true;
+      this.displayPins();
+    });
+  }
+
   loadMap(){
     Geolocation.getCurrentPosition().then((position) => {
       this.lat = position.coords.latitude;
       this.lon = position.coords.longitude;
       this.geocoder = new google.maps.Geocoder;
-      this.reverseGeo();
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       let mapOptions = {
         center: latLng,
@@ -82,6 +84,7 @@ export class HomePage {
       }
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
       this.addHomeInfo();
+      this.reverseGeo();
       if (this.pins) {
         for (let pin of this.pins) {
           this.addMarkerInfo(pin);
