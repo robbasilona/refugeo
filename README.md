@@ -51,20 +51,32 @@ ionic serve
 
 Might need to execute *npm install* to install other packages.
 
-### Some API credentials
-Web App
-```
-```
-
-Rails API Deployed App
+### Deployed Modules URLs
+Rails API
 ```
 https://fast-cove-98117.herokuapp.com/
 ```
 
-Node Messenger App
+Messenger Bot
 ```
 https://pacific-everglades-10344.herokuapp.com/
 ```
+
+Twitter Bot
+```
+https://arcane-garden-83741.herokuapp.com/
+```
+
+Web App
+```
+http://refugeo.upcsi.xyz
+```
+
+Google Play Store
+```
+```
+
+### API Credentials
 
 Google Maps API key
 ```

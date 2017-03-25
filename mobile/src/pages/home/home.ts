@@ -28,7 +28,7 @@ export class HomePage {
   lat: number;
   lon: number;
   loc: string;
-  icons = ['http://maps.google.com/mapfiles/ms/icons/red-dot.png', 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'];
+  icons = ['https://maps.google.com/mapfiles/ms/icons/red-dot.png', 'https://maps.google.com/mapfiles/ms/icons/green-dot.png', 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'];
   pins: Array<any>;
   supplies: any;
   // windows: Array<any>;
