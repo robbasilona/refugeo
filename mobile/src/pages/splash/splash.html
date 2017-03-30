@@ -13,36 +13,36 @@
 </ion-header> -->
 
 
-<ion-content class="splash" style="background-image: url('assets/img/splashbg.png') !important;">
+<ion-content class="splash" style="background-image: url('assets/img/splashbg.png')">
 <div padding class="padtop">
 </div>
 <div>
-  	<img src="assets/img/iconwithtext.png">
+        <img id="refugeo-logo" class="center" src="assets/img/iconwithtext.png">
 </div>
 <div>
 </div>
 <div>
 </div>
-<ion-grid>
-  <ion-row class="colbtns">
-    <ion-col class="colbtns">
+<ion-grid class="center-grid">
+  <ion-row class="colbtns inline-row">
+    <ion-col class="colbtns inline-row">
       <button ion-button class="splashbtn" color="primary" (click)="goTo()">
         <img src="assets/img/useapp.png">
       </button>
     </ion-col>
-    <ion-col class="colbtns">
+    <ion-col class="colbtns inline-row">
       <button ion-button class="splashbtn" color="primary" (click)="goToInfo()">
         <img src="assets/img/aboutus.png">
       </button>
     </ion-col>
   </ion-row>
-  <ion-row class="colbtns">
-    <ion-col class="colbtns">
+  <ion-row class="colbtns inline-row">
+    <ion-col class="colbtns inline-row">
       <button ion-button class="splashbtn" color="primary" (click)="goToText()">
         <img src="assets/img/sendsms.png">
       </button>
     </ion-col>
-    <ion-col class="colbtns">
+    <ion-col class="colbtns inline-row">
       <button ion-button class="splashbtn" color="primary" (click)="goToMsgr()">
         <img src="assets/img/sendfb.png">
       </button>

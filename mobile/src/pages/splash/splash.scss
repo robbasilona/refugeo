@@ -5,25 +5,74 @@ page-splash {
 		padding-right: 10px !important;
 	}
 	.padtop {
-		padding-top: 10% !important;
+		padding-top:0% !important;
+		background-image: url('assets/img/splashbg.png');
 	}
 	.splash {
-		background-image: url("/assets/img/splashbg.png") !important;
+		background-image: url("assets/img/splashbg.png") !important;
 	}
+
 	.splashbtn {
-		min-width: 100%;
-		min-height: 42vw;
-		max-width: 100%;
-		max-height: 42vw;
+		min-width: 20vw;
+		min-height: 20vw;
+		max-width: 15vw;
+		max-height: 30vw;
 		padding: 0px;
 	}
-	.splashbtntxt {
-		min-width: 100%;
-	}
+
 	.colbtns {
 		align-items: center !important;
 		align-content: center !important;
 		align-self: center !important;
 		padding: 0px 5px;
+	}
+	#refugeo-logo {
+	    height: 20vw;
+	    width:40vw;
+	}
+
+	.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	}
+
+	.center-grid {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	padding-left: 6vw;
+	}
+
+	.inline-row {
+		display: inline;
+	}
+
+	@media screen and (max-width: 768px) {
+	    #refugeo-logo {
+	            height: auto;
+	            width: auto;
+	    }
+		.splashbtn {
+			min-width: 100%;
+			min-height: 42vw;
+			max-width: 100%;
+			max-height: 42vw;
+			padding: 0px;
+		}
+		.splashbtntxt {
+			min-width: 100%;
+		}
+		.padtop {
+			padding-top: 10% !important;
+		}
+
+		.inline-row {
+			display:flex;
+		}
+
+		.center-grid {
+	    display: flex;
+		}
 	}
 }
